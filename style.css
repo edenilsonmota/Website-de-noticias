@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+*{                              /*Todo elemento html*/
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container{
+    background-color:#000000 ;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    text-align: center; 
+
+
+}
+.logo{  /*logo */
+    background-color: #1A1A1A;
+    padding: 5px;
+    text-align: center;
+    
+
+}
+.a-logo{  /* a do logo*/
+    text-decoration: none;
+    font-size: 3rem;
+    color: #F2F2F2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.menu{  /*menu abaixo do logo*/
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #313131;
+    overflow: hidden;
+}
+.menu a{
+    font-size: 1.3rem;
+    display:block;
+    float: left;
+    padding: 1rem;
+    color: #C8C8C8;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.a-menu:hover{
+    background-color: #16a503;
+    color: #ffffff;
+}
+main{ 
+    padding: 1.2rem;
+    display: flex;
+    width: 60%;
+}
+.titulo{  /*titulo do main*/
+    font-size: 2rem;
+    line-height: 55px;
+    font-family: Montserrat, Verdana, Geneva, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+.subtitulo{
+    color: #676767;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 22.4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    font-weight: 450;
+    padding: 1rem;
+}
+h3{
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p{
+    text-align: justify;
+    padding: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+.titulo::selection{
+    background-color: #16a503; /* titulo texto selecionado*/
+}
+.subtitulo::selection{
+    background-color: #16a503; /* subtitulo texto selecionado*/
+    color: #ffffff;
+}
+h3::selection{
+    background-color: #16a503; /* h3 texto selecionado*/
+}
+p::selection{
+    background-color: #16a503; /* p texto selecionado*/
+}
+.list-article{
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container-aside-1, .container-aside-2{
+    width: 17%;
+    height: 40rem;
+    background-color: #1A1A1A;
+}
+.container-aside-1 ul, .container-aside-2 ul {
+    list-style: none;
+}
+.container-aside-1 ul li a, .container-aside-2 ul li a{
+    display:block;
+    padding: 15px;
+    color: #C8C8C8;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container-aside-1 ul li a:hover{
+    background-color: #16a503;
+    color: #ffffff;
+}
+.container-aside-2 ul li a:hover{
+    background-color: #16a503;
+    color: #ffffff;
+}
+.footer-end{  /*rodapé*/
+    width: 100%;
+    background-color: #313131;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.footer-end a{
+    font-size: 1rem;
+    display:block;
+    padding: 1rem;
+    color: #C8C8C8;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer-list:hover{
+    background-color: #16a503;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+    aside { flex: 1;}
+}
+
+@media screen and (max-width: 1024px) {
+    main{
+        width: 90%;
+        padding: auto;
+        margin: 0;
+    }
+    main    { order: 1; }
+    .container-aside-1 { order: 2; }
+    .container-aside-2 { order: 3; }
+    .footer  { order: 4; }
+
+    .menu a{
+        float: none;
+        width: 100%;
+    }
+}
